@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nav</title>
+
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 2rem;
+        }
+
+        .nav {
+            display: flex;
+            list-style: none;
+            background-color: #fff;
+            height:100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+            padding-left: 0;
+            font-size: 1.25rem;
+
+            margin:1rem 0;
+        }
+
+        .nav-item{
+            padding:1rem 0.75rem;
+        }
+        .nav-item a {
+            text-decoration: none;
+        }
+
+        .nav-item.active a{
+            background-color: purple;
+            color:#fff;
+            border-radius: 0.25rem;
+        }
+
+        .nav-item.disabled a{
+            color:#999;
+            pointer-events: none;
+        }
+
+
+        .nav--center{
+            flex-direction: row;
+            justify-content: center;
+        }
+
+
+        .nav--right{
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+
+        @media (max-width: 600px) and (orientation: portrait){
+            .nav{
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+</head>
+<body style="background-color: #f7f7f7;">
+
+
+<ul class="nav">
+    <li class="nav-item active"><a href="#">Lorem</a></li>
+    <li class="nav-item"><a href="#">Ex</a></li>
+    <li class="nav-item"><a href="#">Esse</a></li>
+    <li class="nav-item disabled"><a href="#">Doloremque</a></li>
+</ul>
+
+
+
+<ul class="nav nav--center">
+    <li class="nav-item active"><a href="#">Lorem</a></li>
+    <li class="nav-item"><a href="#">Ex</a></li>
+    <li class="nav-item"><a href="#">Esse</a></li>
+    <li class="nav-item disabled"><a href="#">Doloremque</a></li>
+</ul>
+
+
+<ul class="nav nav--right">
+    <li class="nav-item active"><a href="#">Lorem</a></li>
+    <li class="nav-item"><a href="#">Ex</a></li>
+    <li class="nav-item"><a href="#">Esse</a></li>
+    <li class="nav-item disabled"><a href="#">Doloremque</a></li>
+</ul>
+
+</body>
+</html>
